@@ -10,7 +10,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "https://client-test-1-gambit9111.vercel.app/",
+    // allow requests from any origin
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
